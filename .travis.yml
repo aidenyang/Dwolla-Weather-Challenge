@@ -1,11 +1,11 @@
 language: python
 python:
-  - "3.6"
-  # PyPy versions
-  - "pypy"  # PyPy2 2.5.0
-  - "pypy3" # Pypy3 2.4.0
-# command to install dependencies
+- '3.6'
+- pypy
+- pypy3
 install:
-  - pip install -r requirements.txt
-# command to run tests
+- pip install -r requirements.txt
 script: nosetests
+env:
+  matrix:
+    secure: Xe6CmuFft+n0gRHsRlNGTxl71RU26W504MU2l8WIjOKsWAnUBDlw61yL0iChuLmDDoNkgwed3biM8DwAkmV/CvPOikuF8JnTrOzaCU8xyekHNTRlslElNhSmY2kU6HTqdn451CrMi+eq3MAJs9bgBzYje2ihdl2SvL4Tjt47vxD4sCDyvA3faPBGyob/bB3fQwc2T5D5LDFT35ZJVQfCz16cUJYzPXgWDyHI06lkt87yTzHGftZCYfa9M7cvk9KMjQKc0yqd5rZzYT8wF54cynEW8gkr+37OrXukawJZ18gqOB0YKuahlxFRq7Z4gc8rZrPLbi5fmcTfuz0XfsxkAXnK6QuiDE34j2glLs37Ma6B6jp1Ym1CRXxWjQtl5/5GA0i/M6diPKikmB/XbNMMbXn+lgAJPkvLJJ2QqC7dsOZq2Dp/n4UxsXUJvLGPt7G0HiEnEAuAsYEuF5URjc2Re+ncUNBdMCkvPfBfYy/8Z2ACk8k43437Y9DiCcxq6W2PDo2h+ShEWQas0/M+yo3pJROoBritdpjx497wZpBKT98lUZbPz+ruY5/cnktNtMgRPr7ciwoq5/aIN8dxQaEOUP4hTQ0a8HELeuNjPUJEjB3rgZFflRg49DY5BRmh3aiNtcTdh/1PmW/dybIjScwnpqy1rIsF8+gVC7EEGQbahsc=
