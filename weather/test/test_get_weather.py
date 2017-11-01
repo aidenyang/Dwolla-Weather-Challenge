@@ -12,7 +12,7 @@ from weather.weather import Weather
 class TestWeather(unittest.TestCase):
 	weather = Weather()
 
-	@attr('unit')
+	@attr('integration')
 	def test_getting_weather_with_valid_city(self):
 		# Given
 		# When
@@ -23,7 +23,7 @@ class TestWeather(unittest.TestCase):
 		self.assertIsNotNone(response['temperature'])
 		self.assertIsInstance(response['temperature'], float)
 
-	@attr('unit')
+	@attr('integration')
 	def test_getting_weather_with_valid_city_and_state_no_comma(self):
 		# Given
 		# When
@@ -35,7 +35,7 @@ class TestWeather(unittest.TestCase):
 		self.assertIsNotNone(response['temperature'])
 		self.assertIsInstance(response['temperature'], float)
 
-	@attr('unit')
+	@attr('integration')
 	def test_getting_weather_with_valid_city_and_state_with_comma(self):
 		# Given
 		# When
@@ -46,7 +46,7 @@ class TestWeather(unittest.TestCase):
 		self.assertIsNotNone(response['temperature'])
 		self.assertIsInstance(response['temperature'], float)
 
-	@attr('unit')
+	@attr('integration')
 	def test_getting_weather_with_invalid_city(self):
 		# Given
 		# When
@@ -55,7 +55,7 @@ class TestWeather(unittest.TestCase):
 		# Then
 		self.assertIsNone(response)
 	
-	@attr('unit')
+	@attr('integration')
 	def test_getting_weather_with_empty_city(self):
 		# Given
 		# When
@@ -64,7 +64,7 @@ class TestWeather(unittest.TestCase):
 		# Then
 		self.assertIsNone(response)
 
-	@attr('integration')	
+	@attr('unit')	
 	@patch('weather.weather.requests.get')
 	def test_getting_weather_when_response_is_ok(self, mock_get):
 		# Given
@@ -82,7 +82,7 @@ class TestWeather(unittest.TestCase):
 		self.assertEqual(response['name'], "Chicago")
 		self.assertEqual(response['temperature'], 40.19)
 
-	@attr('integration')
+	@attr('unit')
 	@patch('weather.weather.requests.get')
 	def test_getting_weather_when_response_is_404(self, mock_get):
 		# Given 
@@ -94,7 +94,7 @@ class TestWeather(unittest.TestCase):
 		# Then
 		self.assertIsNone(response)
 
-	@attr('integration')
+	@attr('unit')
 	@patch('weather.weather.requests.get')
 	def test_getting_weather_when_response_is_400(self, mock_get):
 		# Given 
@@ -106,7 +106,7 @@ class TestWeather(unittest.TestCase):
 		# Then
 		self.assertIsNone(response)
 
-	@attr('integration')
+	@attr('unit')
 	@patch('weather.weather.requests.get')
 	def test_getting_weather_when_response_is_500(self, mock_get):
 		# Given 
