@@ -1,19 +1,25 @@
-# Dwolla Technical Challenge
+# OpenWeather API Technical Challenge for Dwolla
+
+![Travis CI Build Status](https://travis-ci.org/aidenyang/Dwolla-Weather-Challenge.svg?branch=master)
 
 ### Requirements
-Python 3.x
+* Python 3.x
 
 ### Installation
+Set environment variable for OpenWeather API Key
 
-``` pip install -r requirements.txt ```
+`export OPEN_WEATHER_KEY=XXXXXXXXX`
 
-``` python weather.py```
+`pip install -r requirements.txt`
 
-### Testing
+### Execution
+`python weather.py`
+
+### Tests
 To run all tests: 
-``` nosetests ```
+`nosetests`
 
-To run unit tests only: ``` nosetests -a "unit" ```
+To run unit tests only: `nosetests -a "unit"`
 
-To run integration tests only: ``` nosetests -a "integration" ```
+To run integration tests only: `nosetests -a "integration"`
 
